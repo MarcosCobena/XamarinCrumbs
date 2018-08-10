@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:GlobalStyles />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.GlobalStyles">
+
+    <!--
+    Wouldn't it be great to default StackLayout's Spacing to 0 everywhere, or having every Label a 
+    default font size and color? Less code to write, easier refactorings. All these fit here perfectly.
+
+    Are you looking for Key-full styles? Styles.xaml is your place.
+    -->
+    
+    <Style 
+        TargetType="Button">
+        <Setter Property="BorderColor" Value="{StaticResource DefaultButtonBorderColor}" />
+        <Setter Property="BorderRadius" Value="2" />
+        <Setter Property="BackgroundColor" Value="{StaticResource DefaultButtonBackgroundColor}" />
+    </Style>
+
+    <Style 
+        TargetType="Label"
+        BasedOn="{StaticResource 14RegularFontStyle}">
+        <Setter Property="TextColor" Value="{StaticResource DefaultTextColor}" />
+    </Style>
+
+    <Style 
+        TargetType="StackLayout">
+        <Setter Property="Spacing" Value="0" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:Converters />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:SnipInsight.Forms.Converters"
+    x:Class="XamarinCrumbs.XamarinForms.Converters">
+
+    <!--
+    If a particular converter's used only on a single XAML, just define it there. However, for those in more than one, 
+    having them here will help you adding new ones.
+
+    Conventions:
+    - Key: {nameof(YourActualConverter)}.Replace("Converter", string.Empty)
+        - The reason why "Converter" is ripped from the key comes from better readability when using them in XAML: it 
+          just feels nicer things like —the word already appears a few times:
+
+        IsEnabled="{Binding ImagePath, Converter={StaticResource StringEmptyToBool}, ConverterParameter=inverse}"
+    -->
+    
+    <converters:NotConverter x:Key="Not" />
+    
+    <converters:StringEmptyToBoolConverter x:Key="StringEmptyToBool" />
+    
+</ResourceDictionary>

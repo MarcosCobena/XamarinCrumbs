@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:Sizes />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.Sizes">
+
+    <!-- 
+    This' the perfect place for sizes: margins, paddings, spacings, font sizes, etc. It's quite common designs rely in recurrent 
+    sizes to place stuff, thus are suitable to be reused.
+
+    Conventions:
+    - Key: {Negative?}{Adjective}{Identifier}{Type}, where Type stands for Margin, Padding, etc.
+    -->
+    
+    <x:Double x:Key="BiggerDefaultMargin">32</x:Double>
+
+    <x:Double x:Key="DefaultMargin">24</x:Double>
+
+    <x:Double x:Key="SmallerDefaultMargin">16</x:Double>
+
+    <x:Double x:Key="SmallestDefaultMargin">8</x:Double>
+
+    <!-- Notice how we've defined the negative version, as it's neat for disabling outer margins, f.e. -->
+    <x:Double x:Key="NegativeSmallestDefaultMargin">-8</x:Double>
+
+    <!-- Having font sizes here lets you increase the entire app font sizes from a single place -->
+    <x:Double x:Key="DefaultFontSize">14</x:Double>
+    
+</ResourceDictionary>

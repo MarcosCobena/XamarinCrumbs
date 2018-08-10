@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:Colors />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.Colors">
+
+    <!--
+    Every color's placed here: it's super convenient to have all together, it helps us identity repeated ones, for 
+    instance. We try to keep them order alphabetically, although it's not a must: simply helps some of us to quickly 
+    locate them.
+
+    Conventions:
+    - Key: {Identifier}Color
+    - Value: lowercase hex format (you can opt for uppercase, but choosing one will keep consistency)
+    -->
+    
+    <Color x:Key="AccentColor">#50e3c2</Color>
+    
+    <Color x:Key="DefaultTextColor">#abb3c8</Color>
+
+    <Color x:Key="SecondaryTextColor">#868ea4</Color>
+
+    <!-- Sometimes it's intelligent to duplicate Xamarin.Forms.Color's to support future tonality changes, f.e. -->
+    <Color x:Key="WhiteColor">#ffffff</Color>
+
+</ResourceDictionary>

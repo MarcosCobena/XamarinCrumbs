@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:ControlTemplates />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.ControlTemplates">
+
+    <!--
+    When you're going through the screens designed, don't you realize there's a common pattern? If you do, try to group 
+    all those things shared intro Control Templates, because will frame your pages letting such concentrate just in the 
+    inner content.
+
+    Conventions:
+    - Key: {Identifier}Template
+
+    In order to consume them, just add those at page's definition:
+
+        <ContentPage 
+            [...]
+            ControlTemplate="{StaticResource FullScreenLoadingTemplate}">
+    -->
+
+    <!-- This one's particularly handy, as can make any page loading-aware -->
+    <ControlTemplate x:Key="FullScreenLoadingTemplate">
+        <AbsoluteLayout>
+
+            <ContentPresenter
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                IsVisible="{TemplateBinding BindingContext.IsBusy, Converter={StaticResource NotConverter}}"/>
+
+            <ContentView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                IsVisible="{TemplateBinding BindingContext.IsBusy}">
+                <ActivityIndicator
+                    IsRunning="true"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </ContentView>
+
+        </AbsoluteLayout>
+    </ControlTemplate>
+
+</ResourceDictionary>

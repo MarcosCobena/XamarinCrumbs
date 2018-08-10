@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:Styles />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.Styles">
+    <!-- Notice how we're merging here other dictionaries as we depend on them to express our styles -->
+    <ResourceDictionary.MergedDictionaries>
+        <local:Colors />
+        <local:FontStyles />
+        <local:Sizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--
+    Headers, bodies, captions... all these are suitable elements to style because may appear in different XAMLs and 
+    share common properties.
+
+    Are you looking for Key-less styles? GlobalStyles.xaml is your place.
+
+    Conventions:
+    - Key: {Identifier}{TargetType}Style
+        - TargetType may look redundant but it really helps avoiding coming back here to know such
+    -->
+    
+    <Style 
+        x:Key="TitleLabelStyle"
+        TargetType="Label"
+        BasedOn="{StaticResource 12BoldFontStyle}">
+        <Setter Property="Margin">
+            <Thickness
+                Top="{StaticResource DefaultMargin}"
+                Bottom="{StaticResource DefaultMargin}"/>
+        </Setter>
+        <Setter Property="TextColor" Value="{StaticResource DefaultTextColor}" />
+    </Style>
+    
+</ResourceDictionary>

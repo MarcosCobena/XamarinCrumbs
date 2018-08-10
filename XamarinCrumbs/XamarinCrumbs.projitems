@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6F41F326-6126-4F08-88F1-03F9DC5666C3}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>XamarinCrumbs</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\FontStyles.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\Colors.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\Sizes.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\GlobalStyles.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\Converters.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\Styles.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)XamarinForms\ControlTemplates.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)Settings.StyleCop" />
+    <None Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\FontStyles.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Colors.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Sizes.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\GlobalStyles.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NotConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringEmptyToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Styles.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\ControlTemplates.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\BaseViewModel.cs" />
+  </ItemGroup>
+</Project>

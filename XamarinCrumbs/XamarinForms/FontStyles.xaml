@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+TODO merge App.xaml with this dictionary:
+
+    <ResourceDictionary.MergedDictionaries>
+        <local:FontStyles />
+    </ResourceDictionary.MergedDictionaries>
+-->
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.FontStyles">
+
+    <!--
+    You can define here every font the app may need. This will help you refactor sizes, for instance, much more easier.
+
+    Conventions:
+    - Key: {FontSize}{FontAttributes}FontStyle
+    -->
+    
+    <Style 
+        x:Key="12RegularFontStyle"
+        TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <!-- Notice how this one depends on its regular flavour, through inheritance —we don't want to rewrite stuff -->
+    <Style
+        x:Key="12BoldFontStyle"
+        TargetType="Label"
+        BasedOn="{StaticResource 12RegularFontStyle}">
+        <Setter
+            Property="FontAttributes"
+            Value="Bold" />
+    </Style>
+
+    <!-- It may be the case you need external fonts, so you can define such this way, using it as a FontFamily -->
+    <OnPlatform 
+        x:Key="LatoRegular"
+        x:TypeArguments="x:String"
+        Android="Lato-Regular.ttf#Lato"
+        iOS="Lato-Regular" />
+
+</ResourceDictionary>
