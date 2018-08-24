@@ -23,7 +23,6 @@
     <None Include="$(MSBuildThisFileDirectory)XamarinForms\Styles.xaml" />
     <None Include="$(MSBuildThisFileDirectory)XamarinForms\ControlTemplates.xaml" />
     <None Include="$(MSBuildThisFileDirectory)Settings.StyleCop" />
-    <None Include="$(MSBuildThisFileDirectory)README.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\FontStyles.xaml.cs" />

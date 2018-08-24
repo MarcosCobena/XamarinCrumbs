@@ -1,3 +1,11 @@
+# Xamarin Crumbs
+
+A set of source code files —including XAML ones— which I tend to reuse once and again.
+
+Instead of going to the last project I made, the idea is to look here. NuGet looks too much for me here, that's the reason why a simple Shared Project aglutinates everything I may need. I simply take all those pieces likely to reuse, clean them a little bit up (as changing its namespace, for instance) and ready to go.
+
+**NOTE:** It's not intended to provide a buildable project, it hasn't got value per se. Its actual value is to server as a small repository of files which can be copied into our actual solutions.
+
 ## StyleCop
 
 1. With a Solution opened, add [StyleCop.MSBuild](https://www.nuget.org/packages/StyleCop.MSBuild/) NuGet to every project you'd like to enforce coding guidelines
