@@ -12,6 +12,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\Behaviors\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)XamarinForms\FontStyles.xaml" />
@@ -37,5 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\IsStringNullOrWhiteSpaceConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\NotConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Common\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Behaviors\EventToCommandBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Behaviors\BehaviorBase.cs" />
   </ItemGroup>
 </Project>
