@@ -4,22 +4,13 @@ using Xamarin.Forms;
 
 namespace XamarinCrumbs.Converters
 {
-    public class StringEmptyToBoolConverter : IValueConverter
+    public class AreEqualsConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            bool result;
+            var equals = object.Equals(value, parameter);
 
-            var input = value as string;
-            
-            result = string.IsNullOrWhiteSpace(input);                           
-
-            if (parameter != null)
-            {
-                result = !result;
-            }
-
-            return result;
+            return equals;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

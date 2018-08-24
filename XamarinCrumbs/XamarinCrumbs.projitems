@@ -10,8 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)XamarinForms\Common\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)XamarinForms\FontStyles.xaml" />
@@ -30,10 +30,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Sizes.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\GlobalStyles.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Converters\NotConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringEmptyToBoolConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Styles.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\ControlTemplates.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\AnyConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\AreEqualsConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\IsStringNullOrWhiteSpaceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Converters\NotConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XamarinForms\Common\BaseViewModel.cs" />
   </ItemGroup>
 </Project>
