@@ -20,6 +20,11 @@ TODO merge App.xaml with this dictionary:
     <!--
     Headers, bodies, captions... all these are suitable elements to style because may appear in different XAMLs and 
     share common properties.
+    
+    However, take into account whether would make more sense to style in native. One example: a button which you 
+    accomplish through a Label plus a TapGestureRecognizer. In that case, Android app would loose Material Design 
+    haptics, and in the same way iOS' one the corresponding. So, it's better to style in native to assure we don't 
+    forget those differences each platform offers us.
 
     Are you looking for Key-less styles? GlobalStyles.xaml is your place.
 
