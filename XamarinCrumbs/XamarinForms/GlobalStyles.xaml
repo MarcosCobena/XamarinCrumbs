@@ -24,6 +24,12 @@ TODO merge App.xaml with this dictionary:
         <Setter Property="BorderRadius" Value="2" />
         <Setter Property="BackgroundColor" Value="{StaticResource DefaultButtonBackgroundColor}" />
     </Style>
+    
+    <Style 
+        TargetType="Grid">
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="RowSpacing" Value="0" />
+    </Style>
 
     <Style 
         TargetType="Label"

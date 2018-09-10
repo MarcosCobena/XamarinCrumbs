@@ -45,4 +45,30 @@ TODO merge App.xaml with this dictionary:
         <Setter Property="TextColor" Value="{StaticResource DefaultTextColor}" />
     </Style>
     
+    <!--
+    Are you looking for styling Grid's columns or rows? You can't actually do this; however, can define rows and 
+    columns definitions which really accomplish the same:
+    
+        <Grid 
+            ColumnDefinitions="{StaticResource MyColumnDefinition}">
+            [...]
+        </Grid>
+    
+    Conventions:
+    - Key: {Identifier}{ColumnOrRow}Definition
+    
+    NOTE: adding comments on each row/column definition's helpful to later understand what's used for
+    -->
+    
+    <ColumnDefinitionCollection x:Key="MyColumnDefinition">
+        <!-- Rate of interest -->
+        <ColumnDefinition />
+        <!-- Stretch -->
+        <ColumnDefinition />
+        <!-- Bonus -->
+        <ColumnDefinition />
+        <!-- Balance -->
+        <ColumnDefinition />
+    </ColumnDefinitionCollection>
+    
 </ResourceDictionary>

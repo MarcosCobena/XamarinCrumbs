@@ -18,6 +18,13 @@ TODO merge App.xaml with this dictionary:
     - Key: {FontSize}{FontAttributes}FontStyle
     -->
     
+    <!-- It may be the case you need external fonts, so you can define such this way, using it as a FontFamily -->
+    <OnPlatform 
+        x:Key="LatoRegular"
+        x:TypeArguments="x:String"
+        Android="Lato-Regular.ttf#Lato"
+        iOS="Lato-Regular" />
+    
     <Style 
         x:Key="12RegularFontStyle"
         TargetType="Label">
@@ -33,12 +40,5 @@ TODO merge App.xaml with this dictionary:
             Property="FontAttributes"
             Value="Bold" />
     </Style>
-
-    <!-- It may be the case you need external fonts, so you can define such this way, using it as a FontFamily -->
-    <OnPlatform 
-        x:Key="LatoRegular"
-        x:TypeArguments="x:String"
-        Android="Lato-Regular.ttf#Lato"
-        iOS="Lato-Regular" />
 
 </ResourceDictionary>
