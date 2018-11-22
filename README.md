@@ -1,3 +1,5 @@
+***IMPORTANT NOTE:** I decided to move this effort into the post series [Xamarin.Forms XAML](https://marcoscobena.com/?i=xf-xaml) so won't be updating this project anymore.*
+
 # Xamarin Crumbs
 
 A set of source code files —including XAML ones— which I tend to reuse once and again.
